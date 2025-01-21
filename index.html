@@ -6,22 +6,19 @@
   <title>xyz.skye</title>
   <link rel="icon" href="pfp.png" type="image/x-icon">
   <style>
-    body {
-      background-color: white;
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Comic Sans MS", sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      padding: 0;
-      font-family: "Comic Sans MS", sans-serif;
       position: relative;
-      overflow: hidden;
     }
 
     .blurred-background {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -38,7 +35,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      font-family: "Comic Sans MS", sans-serif;
       font-size: 24px;
       z-index: 2;
       display: none;
@@ -66,8 +62,12 @@
 
     .content {
       z-index: 0;
-      width: 100%;
-      height: 100%;
+      text-align: center;
+    }
+
+    .content img {
+      max-width: 50%;
+      height: auto;
     }
 
     .music-credit {
@@ -125,9 +125,9 @@
       popup.style.display = 'none';
       blurredBackground.style.display = 'none';
 
-      audio.volume = 0.5;
+      audio.volume = 0.1;
       var volumeUp = setInterval(function() {
-        if (audio.volume < 1) {
+        if (audio.volume < 0.5) {
           audio.volume += 0.05;
         } else {
           clearInterval(volumeUp);
