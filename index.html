@@ -17,9 +17,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
       padding: 0;
       font-family: "Comic Sans MS", sans-serif;
+      position: relative;
     }
     .container {
       text-align: left;
@@ -35,6 +37,27 @@
     }
     img {
       max-width: 50%;
+      height: auto;
+    }
+    .music-credit {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      color: #888;
+    }
+    .youtube-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .youtube-button img {
+      width: 40px;
       height: auto;
     }
   </style>
@@ -53,6 +76,12 @@
       Discord: <a href="https://discord.com/users/xyz.skye">@xyz.skye</a>
       Telegram: <a href="https://t.me/sylphilis">@sylphilis</a>
     </pre>
+  </div>
+  <button class="youtube-button">
+    <img src="youtube-logo.png" alt="YouTube">
+  </button>
+  <div class="music-credit">
+    Music by <strong>High Sunn</strong></strong> (Credit: <a href="URL">https://m.youtube.com/watch?v=BeAVTMw19Vg</a>)
   </div>
 </body>
 </html>
