@@ -111,7 +111,7 @@
     <button class="enter-button" onclick="startAudio()">Enter</button>
   </div>
 
-  <audio id="myAudio" loop>
+  <audio id="myAudio">
     <source src="music.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
@@ -139,7 +139,7 @@
       audio.volume = 0.025;
       var volumeUp = setInterval(function() {
         if (audio.volume < 0.3) {
-          audio.volume += 0.05;
+          audio.volume += 0.025;
         } else {
           clearInterval(volumeUp);
         }
