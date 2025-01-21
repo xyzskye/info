@@ -63,6 +63,11 @@
     .content {
       z-index: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
     }
 
     .content img {
@@ -78,6 +83,12 @@
       width: 100%;
       color: #888;
     }
+
+    .contact-info {
+      font-family: "Comic Sans MS", sans-serif;
+      font-size: 16px;
+    }
+
   </style>
 </head>
 <body>
@@ -125,9 +136,9 @@
       popup.style.display = 'none';
       blurredBackground.style.display = 'none';
 
-      audio.volume = 0.1;
+      audio.volume = 0.025;
       var volumeUp = setInterval(function() {
-        if (audio.volume < 0.5) {
+        if (audio.volume < 0.3) {
           audio.volume += 0.05;
         } else {
           clearInterval(volumeUp);
