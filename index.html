@@ -42,7 +42,7 @@
 
     .enter-button {
       margin-top: 20px;
-      background-color: #4CAF50;
+      background-color: #ffc0cd;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -53,7 +53,7 @@
     }
 
     .enter-button:hover {
-      background-color: #45a049;
+      background-color: #ffc0cdd4;
     }
 
     audio {
@@ -66,8 +66,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100%;
+      justify-content: flex-start;
+      padding-top: 20px;
+      width: 100%;
     }
 
     .content img {
@@ -90,6 +91,7 @@
       line-height: 1.5;
       color: black;
       margin-top: 20px;
+      text-align: center;
     }
 
     .contact-info a {
@@ -98,7 +100,22 @@
     }
 
     .contact-info a:hover {
-      color: #4CAF50;
+      color: #3e8eff;
+    }
+
+    .youtube-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .youtube-button img {
+      width: 40px;
+      height: auto;
     }
   </style>
 </head>
@@ -126,6 +143,12 @@
     <source src="music.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
+
+  <a href="https://youtu.be/em5DjChHo8M" target="_blank">
+    <button class="youtube-button">
+      <img src="youtube-logo.png" alt="YouTube">
+    </button>
+  </a>
 
   <div class="music-credit">
     Music by <strong>High Sunn</strong>
